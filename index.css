@@ -1,0 +1,84 @@
+.fabulous {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: rgba(247, 112, 112, 0.20);
+  cursor: pointer;
+}
+
+.fabulous .wrist {
+  position: absolute;
+  width: 18px;
+  height: 45px;
+  background: #7b49b6;
+  border-radius: 25%;
+  top: 50%;
+  left: 50%;
+  margin-left: -35px;
+  margin-top: -11px;
+}
+
+.span2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #7b49b6;
+  border-radius: 10px;
+  transform: skewX(-10deg);
+  left: 50%;
+  margin-left: -12px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+
+/*覆盖角*/
+
+.span2:before {
+  content: ' ';
+  left: -4px;
+  top: -1px;
+  height: 42px;
+  width: 20px;
+  position: absolute;
+  transform: skewX(10deg);
+  background-color: #7b49b6;
+  border-radius: 10px 0 0 0;
+}
+
+.span2:after {
+  content: ' ';
+  left: -10px;
+  top: -20px;
+  bottom: 100%;
+  border: solid 16px;
+  border-color: transparent #7b49b6 #7b49b6 transparent;
+  position: absolute;
+  transform: skewX(10deg);
+  border-right-width: 4px;
+  border-bottom-width: 8px;
+}
+
+.span3 {
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  background-color: #7b49b6;
+  transform: skewY(10deg);
+  border-radius: 55% 50% 0 10%;
+  left: 50%;
+  margin-left: 3px;
+  top: 50%;
+  margin-top: -41px;
+}
+
+.span3::before {
+  /* content: ' '; */
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  transform: skewY(-10deg);
+  background-color: #b66149;
+  border-radius: 40%;
+  left: -7px;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "praisebutton",
+  "version": "1.0.0",
+  "description": "ohuo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leitongda/PraiseButton.git"
+  },
+  "keywords": [
+    "button"
+  ],
+  "author": "leitongda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leitongda/PraiseButton/issues"
+  },
+  "homepage": "https://github.com/leitongda/PraiseButton#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

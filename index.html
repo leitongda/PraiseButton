@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="Description" content=""/>
+		<meta name="Keywords" content=""/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+    <div class="fabulous" id="btn">
+      <span class="wrist"></span>
+      <span class="span2"></span>
+      <span class="span3"></span>
+    </div>
+    <h1 id="msg"></h1>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/systemjs/0.21.0/system.js"></script>
+    <script type="text/javascript">
+        System.config({
+          baseURL: './'
+        });
+        SystemJS.import('test.js').then(function (m) {
+          console.log(m)
+          jQuery.fn.extend({
+            thumb: function () {
+              m.default.thumbObj.addNum();
+              return m.default.thumbObj.num;
+            }
+          })
+        });
+        var $btn = $('#btn');
+        var $msg = $('#msg');
+        $btn.on('click', function () {
+          $msg.text('当前累计点击次数：' + $(this).thumb())
+        })
+    </script>
+	</body>
+</html>
